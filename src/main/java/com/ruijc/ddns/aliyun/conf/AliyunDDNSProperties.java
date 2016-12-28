@@ -1,4 +1,4 @@
-package com.ruijc.aliyun.ddns;
+package com.ruijc.ddns.aliyun.conf;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,34 +31,27 @@ package com.ruijc.aliyun.ddns;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
+import com.ruijc.ddns.aliyun.conf.bean.Record;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
+
+import java.util.List;
 
 /**
- * 阿里云配置
+ * 阿里云解析配置
  *
  * @author Storezhang
- * @create 2016-12-28 09:45
+ * @create 2016-12-28 09:44
  */
-@ConfigurationProperties("aliyun")
-public class AliyunProerties {
+@ConfigurationProperties("aliyun.ddns")
+public class AliyunDDNSProperties {
 
-    private String appKey;
-    private String secret;
+    private List<Record> records;
 
-    public String getAppKey() {
-        return appKey;
+    public List<Record> getRecords() {
+        return records;
     }
 
-    public void setAppKey(String appKey) {
-        this.appKey = appKey;
-    }
-
-    public String getSecret() {
-        return secret;
-    }
-
-    public void setSecret(String secret) {
-        this.secret = secret;
+    public void setRecords(List<Record> records) {
+        this.records = records;
     }
 }

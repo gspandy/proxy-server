@@ -1,4 +1,4 @@
-package com.ruijc.aliyun.ddns.conf;
+package com.ruijc.ddns.aliyun;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,19 +31,34 @@ package com.ruijc.aliyun.ddns.conf;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
 
 /**
- * 启动类
+ * 阿里云配置
+ *
  * @author Storezhang
- * Create Date: 2016-12-28
+ * @create 2016-12-28 09:45
  */
+@ConfigurationProperties("aliyun")
+public class AliyunProerties {
 
-@SpringBootApplication
-public class AliyunDDNSApplication {
+    private String appKey;
+    private String secret;
 
-    public static void main(String[] args) {
-        SpringApplication.run(AliyunDDNSApplication.class, args);
+    public String getAppKey() {
+        return appKey;
+    }
+
+    public void setAppKey(String appKey) {
+        this.appKey = appKey;
+    }
+
+    public String getSecret() {
+        return secret;
+    }
+
+    public void setSecret(String secret) {
+        this.secret = secret;
     }
 }

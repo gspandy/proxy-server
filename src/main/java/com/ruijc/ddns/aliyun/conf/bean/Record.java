@@ -1,4 +1,4 @@
-package com.ruijc.aliyun.ddns.api;
+package com.ruijc.ddns.aliyun.conf.bean;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,19 +31,41 @@ package com.ruijc.aliyun.ddns.api;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import com.aliyuncs.alidns.model.v20150109.UpdateDomainRecordRequest;
-
 /**
- * 云解析接口
+ * 解析记录
  *
  * @author Storezhang
- * @create 2016-12-28 10:01
+ * @create 2016-12-28 10:06
  * @email storezhang@gmail.com
  * @qq 160290688
  */
-public class AliyunDDNSApi {
+public class Record {
 
-    public void update() {
-        UpdateDomainRecordRequest req = new UpdateDomainRecordRequest();
+    private String pr;
+    private String type;
+    private int ttl;
+
+    public String getPr() {
+        return pr;
+    }
+
+    public void setPr(String pr) {
+        this.pr = pr;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getTtl() {
+        return ttl;
+    }
+
+    public void setTtl(int ttl) {
+        this.ttl = ttl;
     }
 }

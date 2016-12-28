@@ -1,2 +1,2 @@
-# aliyun-ddns
-通过阿里云的云解析API来实现DDNS功能。
+# ddns
+实现DDNS动态域名解析功能。
