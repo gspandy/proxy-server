@@ -36,8 +36,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 启动类
+ *
  * @author Storezhang
- * Create Date: 2016-12-28
+ *         Create Date: 2016-12-28
  */
 
 @SpringBootApplication

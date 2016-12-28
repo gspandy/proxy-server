@@ -32,7 +32,6 @@ package com.ruijc.ddns.aliyun;
 //                  不见满街漂亮妹，哪个归得程序员？
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * 阿里云配置

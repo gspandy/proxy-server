@@ -13,6 +13,7 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-alidns:2.0.1" level="project" />
     <orderEntry type="library" name="Maven: com.aliyun:aliyun-java-sdk-core:2.3.8" level="project" />
+    <orderEntry type="library" name="Maven: com.ruijc:spring-boot-starter-fastjson:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: com.ruijc:util:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-test:1.4.2.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-test:1.4.2.RELEASE" level="project" />
