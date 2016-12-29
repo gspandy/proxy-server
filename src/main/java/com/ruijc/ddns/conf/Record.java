@@ -1,4 +1,4 @@
-package com.ruijc.ddns.aliyun.conf.bean;
+package com.ruijc.ddns.conf;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -42,8 +42,9 @@ package com.ruijc.ddns.aliyun.conf.bean;
 public class Record {
 
     private String domain;
-    private String rr;
+    private String host;
     private long ttl;
+    private DDNSType type;
 
     public Record() {
         ttl = 600;
@@ -57,12 +58,12 @@ public class Record {
         this.domain = domain;
     }
 
-    public String getRr() {
-        return rr;
+    public String getHost() {
+        return host;
     }
 
-    public void setRr(String rr) {
-        this.rr = rr;
+    public void setHost(String host) {
+        this.host = host;
     }
 
     public long getTtl() {
@@ -71,5 +72,13 @@ public class Record {
 
     public void setTtl(long ttl) {
         this.ttl = ttl;
+    }
+
+    public DDNSType getType() {
+        return type;
+    }
+
+    public void setType(DDNSType type) {
+        this.type = type;
     }
 }

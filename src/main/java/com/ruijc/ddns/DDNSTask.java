@@ -32,8 +32,8 @@ package com.ruijc.ddns;
 //                  不见满街漂亮妹，哪个归得程序员？
 
 import com.ruijc.ddns.aliyun.AliyunProerties;
-import com.ruijc.ddns.aliyun.conf.AliyunDDNSProperties;
-import com.ruijc.ddns.aliyun.conf.bean.Record;
+import com.ruijc.ddns.conf.DDNSProperties;
+import com.ruijc.ddns.conf.Record;
 import com.ruijc.ddns.aliyun.process.AliyunDDNSL;
 import com.ruijc.util.CollectionUtils;
 import com.ruijc.util.NetworkUtils;
@@ -55,13 +55,13 @@ import java.util.concurrent.TimeUnit;
  * @qq 160290688
  */
 @Component
-@EnableConfigurationProperties({AliyunProerties.class, AliyunDDNSProperties.class})
+@EnableConfigurationProperties({AliyunProerties.class, DDNSProperties.class})
 public class DDNSTask implements CommandLineRunner, Runnable {
 
     @Autowired
     private AliyunProerties aliyunProerties;
     @Autowired
-    private AliyunDDNSProperties ddnsProperties;
+    private DDNSProperties ddnsProperties;
     @Autowired
     private AliyunDDNSL ddnsL;
     private ScheduledExecutorService service;
@@ -77,14 +77,17 @@ public class DDNSTask implements CommandLineRunner, Runnable {
     @Override
     public void run() {
         for (Record record : ddnsProperties.getRecords()) {
-            ddnsL.update(
-                    aliyunProerties.getAppKey(),
-                    aliyunProerties.getSecret(),
-                    record.getDomain(),
-                    record.getRr(),
-                    NetworkUtils.netIp(),
-                    record.getTtl()
-            );
+            switch (record.getType()) {
+                case ALIYUN:
+                    ddnsL.update(
+                            aliyunProerties.getAppKey(),
+                            aliyunProerties.getSecret(),
+                            record.getDomain(),
+                            record.getHost(),
+                            NetworkUtils.netIp(),
+                            record.getTtl()
+                    );
+            }
         }
     }
 }

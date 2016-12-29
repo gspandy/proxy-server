@@ -1,4 +1,4 @@
-package com.ruijc.ddns.aliyun.conf;
+package com.ruijc.ddns.conf;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,7 +31,6 @@ package com.ruijc.ddns.aliyun.conf;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import com.ruijc.ddns.aliyun.conf.bean.Record;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 import java.util.List;
@@ -42,13 +41,14 @@ import java.util.List;
  * @author Storezhang
  * @create 2016-12-28 09:44
  */
-@ConfigurationProperties("aliyun.ddns")
-public class AliyunDDNSProperties {
+@ConfigurationProperties("ddns")
+public class DDNSProperties {
 
     private int interval;
+
     private List<Record> records;
 
-    public AliyunDDNSProperties() {
+    public DDNSProperties() {
         interval = 5;
     }
 
