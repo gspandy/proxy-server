@@ -33,6 +33,7 @@ package com.ruijc.ddns;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  * 启动类
@@ -42,6 +43,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@EnableCaching
 public class DDNSApplication {
 
     public static void main(String[] args) {

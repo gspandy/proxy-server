@@ -45,7 +45,20 @@ import java.util.List;
 @ConfigurationProperties("aliyun.ddns")
 public class AliyunDDNSProperties {
 
+    private int interval;
     private List<Record> records;
+
+    public AliyunDDNSProperties() {
+        interval = 5;
+    }
+
+    public int getInterval() {
+        return interval;
+    }
+
+    public void setInterval(int interval) {
+        this.interval = interval;
+    }
 
     public List<Record> getRecords() {
         return records;

@@ -1,4 +1,4 @@
-package com.ruijc.ddns.controller;
+package com.ruijc.ddns.aliyun.controller;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -62,6 +62,11 @@ package com.ruijc.ddns.controller;
 //                  奔驰宝马贵者趣，公交自行程序员。
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
+
+import com.ruijc.Response;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * DDNS控制器
@@ -73,5 +78,14 @@ package com.ruijc.ddns.controller;
  */
 
 @RestController
+@RequestMapping("/ddns")
 public class DDNSController {
+
+
+    @PutMapping("/{appKey}")
+    public Response update(String appKey, String secret, String domain, String rr, String value) {
+        Response rsp = new Response();
+
+        return rsp;
+    }
 }

@@ -1,0 +1,14 @@
+spring:
+  cache:
+    cache-names: ddns-client
+    guava.spec: expireAfterWrite = 1m
+
+aliyun:
+  appKey: K48woREaD56hZZMm
+  secret: zH3tWk5tH8xeczrpQTnDzV5W0DBPSh
+  ddns:
+    interval: 5
+    records:
+      - domain: linkunion.cn
+        rr: digisky
+        ttl: 600

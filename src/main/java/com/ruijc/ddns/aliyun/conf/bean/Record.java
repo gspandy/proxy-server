@@ -41,31 +41,35 @@ package com.ruijc.ddns.aliyun.conf.bean;
  */
 public class Record {
 
-    private String pr;
-    private String type;
-    private int ttl;
+    private String domain;
+    private String rr;
+    private long ttl;
 
-    public String getPr() {
-        return pr;
+    public Record() {
+        ttl = 600;
     }
 
-    public void setPr(String pr) {
-        this.pr = pr;
+    public String getDomain() {
+        return domain;
     }
 
-    public String getType() {
-        return type;
+    public void setDomain(String domain) {
+        this.domain = domain;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public String getRr() {
+        return rr;
     }
 
-    public int getTtl() {
+    public void setRr(String rr) {
+        this.rr = rr;
+    }
+
+    public long getTtl() {
         return ttl;
     }
 
-    public void setTtl(int ttl) {
+    public void setTtl(long ttl) {
         this.ttl = ttl;
     }
 }
