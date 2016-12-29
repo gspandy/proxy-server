@@ -241,4 +241,26 @@ public class AliyunDDNSApi {
 
         return success;
     }
+
+    public Response<DescribeDomainRecordInfoResponse> detail(IAcsClient client, String recordId) {
+        Response<DescribeDomainRecordInfoResponse> ret = new Response<DescribeDomainRecordInfoResponse>();
+
+        DescribeDomainRecordInfoRequest req = new DescribeDomainRecordInfoRequest();
+        req.setRecordId(recordId);
+        DescribeDomainRecordInfoResponse rsp = null;
+        try {
+            rsp = client.getAcsResponse(req);
+        } catch (ClientException e) {
+            ret.setSuccess(false);
+            ret.setMsg(e.getErrMsg());
+        } catch (Exception e) {
+            ret.setSuccess(false);
+            ret.setMsg(e.getMessage());
+        }
+        if (null != rsp) {
+            ret.setData(rsp);
+        }
+
+        return ret;
+    }
 }

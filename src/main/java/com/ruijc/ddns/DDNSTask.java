@@ -32,9 +32,9 @@ package com.ruijc.ddns;
 //                  不见满街漂亮妹，哪个归得程序员？
 
 import com.ruijc.ddns.aliyun.AliyunProerties;
+import com.ruijc.ddns.aliyun.process.AliyunDDNSL;
 import com.ruijc.ddns.conf.DDNSProperties;
 import com.ruijc.ddns.conf.Record;
-import com.ruijc.ddns.aliyun.process.AliyunDDNSL;
 import com.ruijc.util.CollectionUtils;
 import com.ruijc.util.NetworkUtils;
 import org.springframework.beans.factory.annotation.Autowired;

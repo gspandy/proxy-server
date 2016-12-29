@@ -33,6 +33,7 @@ package com.ruijc.ddns.aliyun.process;
 
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.IAcsClient;
+import com.aliyuncs.alidns.model.v20150109.DescribeDomainRecordInfoResponse;
 import com.aliyuncs.alidns.model.v20150109.DescribeDomainRecordsResponse;
 import com.aliyuncs.profile.DefaultProfile;
 import com.aliyuncs.profile.IClientProfile;
@@ -102,15 +103,25 @@ public class AliyunDDNSL {
         Response rsp;
 
         IAcsClient client = client(appKey, secret);
-        String recordId = recordId(client, domain, rr, value, ttl);
-        rsp = api.update(client, recordId, rr, value, ttl);
-        if (!rsp.isSuccess()) {// 更新失败，清空缓存，重新操作一次
+        rsp = update(client, domain, rr, value, ttl);
+        if (Response.isSuccess(rsp)) {// 更新失败，清空缓存，重新操作一次
             clearCache(domain, rr, value);
         }
 
         // 再次操作
-        recordId = recordId(client, domain, rr, value, ttl);
-        rsp = api.update(client, recordId, rr, value, ttl);
+        rsp = update(client, domain, rr, value, ttl);
+
+        return rsp;
+    }
+
+    private Response update(IAcsClient client, String domain, String rr, String value, long ttl) {
+        Response rsp = null;
+
+        String recordId = recordId(client, domain, rr, value, ttl);
+        Response<DescribeDomainRecordInfoResponse> detail = api.detail(client, recordId);
+        if (null != detail && detail.isSuccess() && rr.equals(detail.getData().getRR()) && !value.equals(detail.getData().getValue())) {
+            rsp = api.update(client, recordId, rr, value, ttl);
+        }
 
         return rsp;
     }
