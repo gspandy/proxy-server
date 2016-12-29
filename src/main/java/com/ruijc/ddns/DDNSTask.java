@@ -70,7 +70,7 @@ public class DDNSTask implements CommandLineRunner, Runnable {
     public void run(String... args) throws Exception {
         if (!CollectionUtils.isBlank(ddnsProperties.getRecords())) {
             service = Executors.newSingleThreadScheduledExecutor();
-            service.scheduleAtFixedRate(this, 0, ddnsProperties.getInterval(), TimeUnit.SECONDS);
+            service.scheduleAtFixedRate(this, 0, ddnsProperties.getInterval(), TimeUnit.MINUTES);
         }
     }
 
