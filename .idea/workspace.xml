@@ -2,33 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c915b1df-4243-4d31-9493-cbda8e69a2e3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_barchart_udt_barchart_udt_bundle_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_ganskef_littleproxy_mitm_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_0_36_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_51.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_littleshoot_littleproxy_1_1_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_alidns_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_aliyun_aliyun_java_sdk_core_2_3_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ddns.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/aliyun/api/AliyunDDNSApi.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/aliyun/controller/DDNSController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/aliyun/process/AliyunDDNSL.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/conf/Record.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/DDNSApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerApplication.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/DDNSTask.java" afterPath="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerTask.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/aliyun/AliyunProerties.java" afterPath="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerFilterSource.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/conf/DDNSProperties.java" afterPath="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerProperties.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ruijc/ddns/conf/DDNSType.java" afterPath="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerFilter.java" />
     </list>
     <ignored path="aliyun-ddns.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -560,7 +534,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProxyServerFilter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProxyServerFilter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerFilter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="354">
@@ -569,6 +543,16 @@
                 <element signature="e#1649#1650#0" expanded="true" />
                 <element signature="e#1692#1693#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -634,13 +618,13 @@
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/HttpFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerFilter.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerProperties.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerTask.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/HttpProxyHandler.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerFilterSource.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -1299,7 +1283,7 @@
       <workItem from="1483066679515" duration="7541000" />
       <workItem from="1483079391996" duration="535000" />
       <workItem from="1483080169549" duration="1596000" />
-      <workItem from="1483081926790" duration="4081000" />
+      <workItem from="1483081926790" duration="4315000" />
     </task>
     <task id="LOCAL-00001" summary="1、增加测试阿里云解析；">
       <created>1482998304633</created>
@@ -1354,10 +1338,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44606000" />
+    <option name="totallyTimeSpent" value="44840000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="7" />
+    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1569,14 +1553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="39" column="18" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2192,6 +2168,14 @@
             <element signature="e#1649#1650#0" expanded="true" />
             <element signature="e#1692#1693#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
