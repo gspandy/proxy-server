@@ -477,16 +477,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ProxyServerTask.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/ruijc/server/proxy/ProxyServerTask.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -1283,7 +1273,7 @@
       <workItem from="1483066679515" duration="7541000" />
       <workItem from="1483079391996" duration="535000" />
       <workItem from="1483080169549" duration="1596000" />
-      <workItem from="1483081926790" duration="4315000" />
+      <workItem from="1483081926790" duration="4356000" />
     </task>
     <task id="LOCAL-00001" summary="1、增加测试阿里云解析；">
       <created>1482998304633</created>
@@ -1334,11 +1324,18 @@
       <option name="project" value="LOCAL" />
       <updated>1483005041084</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="1、去掉不需要的文件；">
+      <created>1483090437155</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1483090437155</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44840000" />
+    <option name="totallyTimeSpent" value="44881000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
@@ -1408,7 +1405,8 @@
     <MESSAGE value="1、增加测试阿里云解析；" />
     <MESSAGE value="1、改架构；" />
     <MESSAGE value="1、修复云解析；" />
-    <option name="LAST_COMMIT_MESSAGE" value="1、修复云解析；" />
+    <MESSAGE value="1、去掉不需要的文件；" />
+    <option name="LAST_COMMIT_MESSAGE" value="1、去掉不需要的文件；" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1421,13 +1419,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/com/aliyun/aliyun-java-sdk-core/2.3.8/aliyun-java-sdk-core-2.3.8.jar!/com/aliyuncs/IAcsClient.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/aliyun/aliyun-java-sdk-alidns/2.0.1/aliyun-java-sdk-alidns-2.0.1-sources.jar!/com/aliyuncs/alidns/model/v20150109/DescribeDomainRecordsResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="302">
@@ -2168,6 +2159,14 @@
             <element signature="e#1649#1650#0" expanded="true" />
             <element signature="e#1692#1693#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/littleproxy-mitm.pem">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
