@@ -12,5 +12,4 @@
 hs_err_pid*
 /littleproxy-mitm.p12
 /littleproxy-mitm.pem
-target/classes/com/
-target/generated-sources/
+target/
