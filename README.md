@@ -1,2 +1,2 @@
-# ddns
-实现DDNS动态域名解析功能。
+# proxy-server
+Java轻量级高性能代理服务器。
