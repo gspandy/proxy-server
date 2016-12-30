@@ -1,4 +1,4 @@
-package com.ruijc.ddns.conf;
+package com.ruijc.server.proxy;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,40 +31,23 @@ package com.ruijc.ddns.conf;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
-import java.util.List;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
- * 阿里云解析配置
+ * 启动类
  *
  * @author Storezhang
- * @create 2016-12-28 09:44
+ * @create 2016-12-29 05:56
+ * @email storezhang@gmail.com
+ * @qq 160290688
  */
-@ConfigurationProperties("ddns")
-public class DDNSProperties {
+@SpringBootApplication
+@EnableCaching
+public class ProxyServerApplication {
 
-    private int interval;
-
-    private List<Record> records;
-
-    public DDNSProperties() {
-        interval = 5;
-    }
-
-    public int getInterval() {
-        return interval;
-    }
-
-    public void setInterval(int interval) {
-        this.interval = interval;
-    }
-
-    public List<Record> getRecords() {
-        return records;
-    }
-
-    public void setRecords(List<Record> records) {
-        this.records = records;
+    public static void main(String[] args) {
+        SpringApplication.run(ProxyServerApplication.class, args);
     }
 }

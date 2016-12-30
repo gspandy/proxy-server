@@ -1,4 +1,4 @@
-package com.ruijc.ddns;
+package com.ruijc.server.proxy;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,22 +31,25 @@ package com.ruijc.ddns;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cache.annotation.EnableCaching;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.HttpRequest;
+import org.littleshoot.proxy.HttpFiltersAdapter;
 
 /**
- * 启动类
+ * 代理过滤器
  *
  * @author Storezhang
- *         Create Date: 2016-12-28
+ * @create 2016-12-30 11:36
+ * @email storezhang@gmail.com
+ * @qq 160290688
  */
+public class ProxyServerFilter extends HttpFiltersAdapter {
 
-@SpringBootApplication
-@EnableCaching
-public class DDNSApplication {
+    public ProxyServerFilter(HttpRequest originalRequest, ChannelHandlerContext ctx) {
+        super(originalRequest, ctx);
+    }
 
-    public static void main(String[] args) {
-        SpringApplication.run(DDNSApplication.class, args);
+    public ProxyServerFilter(HttpRequest originalRequest) {
+        super(originalRequest);
     }
 }

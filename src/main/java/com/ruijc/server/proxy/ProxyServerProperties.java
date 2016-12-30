@@ -1,4 +1,4 @@
-package com.ruijc.ddns.conf;
+package com.ruijc.server.proxy;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,54 +31,53 @@ package com.ruijc.ddns.conf;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
+import org.springframework.boot.context.properties.ConfigurationProperties;
+
 /**
- * 解析记录
+ * 代理服务器配置
  *
  * @author Storezhang
- * @create 2016-12-28 10:06
+ * @create 2016-12-30 11:42
  * @email storezhang@gmail.com
  * @qq 160290688
  */
-public class Record {
+@ConfigurationProperties("proxy")
+public class ProxyServerProperties {
 
-    private String domain;
-    private String host;
-    private long ttl;
-    private DDNSType type;
+    private int port;
+    private String localProxyHost;
+    private String localProxyPort;
+    private String localProxyType;
 
-    public Record() {
-        ttl = 600;
+    public int getPort() {
+        return port;
     }
 
-    public String getDomain() {
-        return domain;
+    public void setPort(int port) {
+        this.port = port;
     }
 
-    public void setDomain(String domain) {
-        this.domain = domain;
+    public String getLocalProxyHost() {
+        return localProxyHost;
     }
 
-    public String getHost() {
-        return host;
+    public void setLocalProxyHost(String localProxyHost) {
+        this.localProxyHost = localProxyHost;
     }
 
-    public void setHost(String host) {
-        this.host = host;
+    public String getLocalProxyPort() {
+        return localProxyPort;
     }
 
-    public long getTtl() {
-        return ttl;
+    public void setLocalProxyPort(String localProxyPort) {
+        this.localProxyPort = localProxyPort;
     }
 
-    public void setTtl(long ttl) {
-        this.ttl = ttl;
+    public String getLocalProxyType() {
+        return localProxyType;
     }
 
-    public DDNSType getType() {
-        return type;
-    }
-
-    public void setType(DDNSType type) {
-        this.type = type;
+    public void setLocalProxyType(String localProxyType) {
+        this.localProxyType = localProxyType;
     }
 }

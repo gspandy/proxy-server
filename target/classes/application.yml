@@ -1,0 +1,9 @@
+spring:
+  cache:
+    cache-names: ddns-client
+    guava.spec: expireAfterWrite = 1m
+
+proxy:
+  port: 7080
+  localProxyHost: 127.0.0.1
+  localProxyPort: 1080

@@ -1,4 +1,4 @@
-package com.ruijc.ddns.aliyun;
+package com.ruijc.server.proxy;
 
 //                            _ooOoo_
 //                           o8888888o
@@ -31,33 +31,24 @@ package com.ruijc.ddns.aliyun;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.HttpRequest;
+import org.littleshoot.proxy.HttpFilters;
+import org.littleshoot.proxy.HttpFiltersSourceAdapter;
+
+import java.net.InetSocketAddress;
 
 /**
- * 阿里云配置
+ * 代理服务器过滤器
  *
  * @author Storezhang
- * @create 2016-12-28 09:45
+ * @create 2016-12-30 11:38
+ * @email storezhang@gmail.com
+ * @qq 160290688
  */
-@ConfigurationProperties("aliyun")
-public class AliyunProerties {
+public class ProxyServerFilterSource extends HttpFiltersSourceAdapter {
 
-    private String appKey;
-    private String secret;
-
-    public String getAppKey() {
-        return appKey;
-    }
-
-    public void setAppKey(String appKey) {
-        this.appKey = appKey;
-    }
-
-    public String getSecret() {
-        return secret;
-    }
-
-    public void setSecret(String secret) {
-        this.secret = secret;
+    public HttpFilters filterRequest(HttpRequest originalRequest, ChannelHandlerContext ctx) {
+        return new ProxyServerFilter(originalRequest, ctx);
     }
 }

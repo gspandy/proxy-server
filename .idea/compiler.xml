@@ -24,11 +24,13 @@
         <processorPath useClasspath="true" />
         <module name="aliyun-ddns" />
         <module name="ddns" />
+        <module name="proxy-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="aliyun-ddns" target="1.6" />
       <module name="ddns" target="1.6" />
+      <module name="proxy-server" target="1.6" />
     </bytecodeTargetLevel>
   </component>
 </project>
