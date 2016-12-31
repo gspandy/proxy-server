@@ -34,7 +34,6 @@ package com.ruijc.server.proxy;
 import com.ruijc.util.StringUtils;
 import org.littleshoot.proxy.HttpProxyServer;
 import org.littleshoot.proxy.impl.DefaultHttpProxyServer;
-import org.littleshoot.proxy.mitm.CertificateSniffingMitmManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -58,16 +57,9 @@ public class ProxyServerTask implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        if (!StringUtils.isAnyBlank(conf.getLocalProxyHost(), conf.getLocalProxyPort())) {
-            System.setProperty("proxySet", "true");
-            System.setProperty("http.socksProxyHost", conf.getLocalProxyHost());
-            System.setProperty("http.socksProxyPort", conf.getLocalProxyPort());
-        }
-
         server = DefaultHttpProxyServer.bootstrap()
                 .withPort(conf.getPort())
                 .withTransparent(true)
-                .withManInTheMiddle(new CertificateSniffingMitmManager())
                 .withFiltersSource(new ProxyServerFilterSource())
                 .start();
     }
