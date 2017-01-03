@@ -45,9 +45,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ProxyServerProperties {
 
     private int port;
-    private String localProxyHost;
-    private String localProxyPort;
-    private String localProxyType;
 
     public int getPort() {
         return port;
@@ -55,29 +52,5 @@ public class ProxyServerProperties {
 
     public void setPort(int port) {
         this.port = port;
-    }
-
-    public String getLocalProxyHost() {
-        return localProxyHost;
-    }
-
-    public void setLocalProxyHost(String localProxyHost) {
-        this.localProxyHost = localProxyHost;
-    }
-
-    public String getLocalProxyPort() {
-        return localProxyPort;
-    }
-
-    public void setLocalProxyPort(String localProxyPort) {
-        this.localProxyPort = localProxyPort;
-    }
-
-    public String getLocalProxyType() {
-        return localProxyType;
-    }
-
-    public void setLocalProxyType(String localProxyType) {
-        this.localProxyType = localProxyType;
     }
 }

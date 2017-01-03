@@ -32,7 +32,9 @@ package com.ruijc.server.proxy;
 //                  不见满街漂亮妹，哪个归得程序员？
 
 import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.http.HttpObject;
 import io.netty.handler.codec.http.HttpRequest;
+import io.netty.handler.codec.http.HttpResponse;
 import org.littleshoot.proxy.HttpFiltersAdapter;
 
 /**
@@ -51,5 +53,14 @@ public class ProxyServerFilter extends HttpFiltersAdapter {
 
     public ProxyServerFilter(HttpRequest originalRequest) {
         super(originalRequest);
+    }
+
+    @Override
+    public HttpResponse clientToProxyRequest(HttpObject httpObject) {
+        if (httpObject instanceof HttpRequest) {
+            System.err.println("--->" + ((HttpRequest) httpObject).getUri());
+        }
+
+        return super.clientToProxyRequest(httpObject);
     }
 }

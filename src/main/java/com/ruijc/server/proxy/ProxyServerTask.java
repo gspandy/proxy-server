@@ -31,9 +31,9 @@ package com.ruijc.server.proxy;
 //                  别人笑我忒疯癫，我笑自己命太贱；
 //                  不见满街漂亮妹，哪个归得程序员？
 
-import com.ruijc.util.StringUtils;
 import org.littleshoot.proxy.HttpProxyServer;
 import org.littleshoot.proxy.impl.DefaultHttpProxyServer;
+import org.littleshoot.proxy.mitm.CertificateSniffingMitmManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -59,8 +59,9 @@ public class ProxyServerTask implements CommandLineRunner {
     public void run(String... args) throws Exception {
         server = DefaultHttpProxyServer.bootstrap()
                 .withPort(conf.getPort())
-                .withTransparent(true)
+                .withAllowLocalOnly(false)
                 .withFiltersSource(new ProxyServerFilterSource())
+                .withManInTheMiddle(new CertificateSniffingMitmManager())
                 .start();
     }
 }
