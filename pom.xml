@@ -40,12 +40,6 @@
 
         <dependency>
             <groupId>com.ruijc</groupId>
-            <artifactId>spring-boot-starter-fastjson</artifactId>
-            <version>2.2.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.ruijc</groupId>
             <artifactId>util</artifactId>
             <version>3.1.0</version>
         </dependency>
